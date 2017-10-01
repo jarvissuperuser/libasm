@@ -42,7 +42,3 @@
 
 	jmp exit
 
-	
-
-		
-['../ft_org.py', '../Libasm-master/src/ft_putchar.s', ';']

@@ -10,8 +10,7 @@
 
 	    mov        r8, rdi
 
-	    lea        rsi, [rel buf] ;rel : force nasm to use RIP relative adressing
-
+	    lea        rsi, [rel buf] 
 
 
 	.reset_fd:
@@ -24,21 +23,21 @@
 
 	    mov        rdx, buflen
 
-	    mov        rax, 0x2000003 ; read
+	    mov        rax, 0x2000003 
 
 	    syscall
 
 	    jc        .error
 
-	    cmp        rax, 0 		; read all ?
+	    cmp        rax, 0 		
 
 	    je        .end
 
-	    mov        rdi, 1 		; fd
+	    mov        rdi, 1 		
 
-	    mov        rdx, rax 	; len
+	    mov        rdx, rax 	
 
-	    mov        rax, 0x2000004 ; write
+	    mov        rax, 0x2000004 
 
 	    syscall
 
@@ -54,9 +53,9 @@
 
 
 
-	section .bss				;variable uninitialised 
+	section .bss				
 
-	buf:	    resb 256		;reserve byte
+	buf:	    resb 256		
 
-	buflen:	    equ $-buf		;get length of buffer
-['../ft_org.py', '../Libasm-master/src/ft_cat.s', ';']
+	buflen:	    equ $-buf		
+]

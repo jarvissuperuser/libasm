@@ -27,4 +27,4 @@
 		mov rax, 0
 
 		ret
-['../ft_org.py', '../Libasm-master/src/ft_isascii.s', ';']
+

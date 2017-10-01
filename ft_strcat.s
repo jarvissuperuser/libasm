@@ -26,13 +26,13 @@
 
 		cmp rsi, 0
 
-		je exit					;all of the above is security
+		je exit				
 
 
 
-		call ft_strlen			;strlen(s1)
+		call ft_strlen		
 
-		mov r12, rax			; lenght of s1 in r12
+		mov r12, rax			
 
 		
 
@@ -40,17 +40,17 @@
 
 		call ft_strlen	
 
-		inc rax					;for '\0'
+		inc rax					
 
 
 
-		mov rdx, rax			;lenght of s2 in rdx
+		mov rdx, rax			
 
-		pop rdi					;put initial value of rdi in rdi
+		pop rdi					
 
 		push rdi
 
-		add rdi, r12			;go to end of chain
+		add rdi, r12			
 
 		call ft_memcpy
 
@@ -64,4 +64,3 @@
 
 	ret
 
-['../ft_org.py', '../Libasm-master/src/ft_strcat.s', ';']

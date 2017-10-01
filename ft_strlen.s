@@ -8,7 +8,7 @@
 
 	ft_strlen:
 
-		xor rcx, rcx				;all byte of rcx set to 0
+		xor rcx, rcx				
 
 		mov rax, 0
 
@@ -16,7 +16,7 @@
 
 		je exit
 
-		not rcx					; all byte of rcx set to 1
+		not rcx				
 
 		repne scasb
 
@@ -29,4 +29,3 @@
 	exit:
 
 	ret
-['../ft_org.py', '../Libasm-master/src/ft_strlen.s', ';']

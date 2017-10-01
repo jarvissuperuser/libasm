@@ -42,5 +42,3 @@
 
 		ret
 
-	
-['../ft_org.py', '../Libasm-master/src/ft_memcpy.s', ';']

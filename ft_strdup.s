@@ -1,11 +1,5 @@
 
 
-	;; 	char *     strdup(const char *s1) ;
-
-	;;	    void *	     malloc(size_t size)	;
-
-	;;   void *    memcpy(void *restrict dst, const void *restrict src, size_t n) ;
-
 	
 
 	section .text
@@ -28,15 +22,15 @@
 
 		cmp rdi, 0
 
-		je exit					;all the above is protection
+		je exit					
 
 	
 
 		call ft_strlen
 
-		inc rax					; for '\0'
+		inc rax					
 
-		mov r12, rax			; save in r12 because r12 is a callee saved (r12-r15)
+		mov r12, rax			
 
 		mov rdi, r12
 
@@ -48,11 +42,11 @@
 
 
 
-		mov rdi, rax 			; dst = malloc(s1)
+		mov rdi, rax 			
 
-		pop rsi					; src = s1;
+		pop rsi					
 
-		mov rdx, r12			; rdx = strlen
+		mov rdx, r12			
 
 		call ft_memcpy
 
@@ -70,6 +64,3 @@
 
 	ret
 
-
-
-['../ft_org.py', '../Libasm-master/src/ft_strdup.s', ';']

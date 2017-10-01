@@ -1,6 +1,5 @@
 
 
-		;;     int        puts(const char *s)
 
 	global ft_puts
 
@@ -12,13 +11,13 @@
 
 	ft_puts:
 
-	    cmp        rdi, 0 		; s != NULL ?
+	    cmp        rdi, 0 		
 
 	    je        .null
 
-	    xor        rax, rax 	; ret = 0
+	    xor        rax, rax 	
 
-	    push    rdi 			; save s
+	    push    rdi 			
 
 
 
@@ -26,13 +25,13 @@
 
 	    call    ft_strlen
 
-	    mov        rdx, rax 	; len
+	    mov        rdx, rax 	
 
-	    mov        rdi, 1 		; STDOUT
+	    mov        rdi, 1 		
 
-	    pop        rsi 			; char *s (mov rdi, rsi)
+	    pop        rsi 			
 
-	    mov        rax, 0x2000004 ; write
+	    mov        rax, 0x2000004 
 
 	    syscall
 
@@ -42,13 +41,13 @@
 
 	.null:
 
-	    lea        rcx, [rel null] ; first byte of (null)
+	    lea        rcx, [rel null] 
 
 	    mov        rdi, 1
 
 	    mov        rsi, rcx
 
-	    mov        rdx, null_l	; longueur de null
+	    mov        rdx, null_l	
 
 	    mov        rax, 0x2000004
 
@@ -58,13 +57,13 @@
 
 	.line:
 
-	    mov        rdi, 0xA		   ;10 = ascii value of \n
+	    mov        rdi, 0xA		  
 
-	    lea        rcx, [rel char] ; write(1, &c, 1)
+	    lea        rcx, [rel char]
 
-	    mov        [rcx], rdi	   ;could use dil (8 bit version of rdi since only \n)
+	    mov        [rcx], rdi	  
 
-	    mov        rdi, 1 		; fd
+	    mov        rdi, 1 	
 
 	    mov        rsi, rcx
 
